@@ -2743,3 +2743,15 @@ a:hover {
   opacity: 0;
   transform: translateY(28px);
 }
+
+.player-video {
+  max-width: 960px;
+  margin: 40px auto 0;
+}
+
+.player-video video {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #000;
+}
