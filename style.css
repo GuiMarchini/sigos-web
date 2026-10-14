@@ -2755,3 +2755,80 @@ a:hover {
   height: auto;
   background: #000;
 }
+
+/* Telas do sistema em celulares: reorganiza o layout em vez de apenas reduzir a escala */
+@media (max-width:760px) {
+  .pagina {
+    --z: 1;
+  }
+  .tela-zoom {
+    display: block;
+    overflow: visible;
+  }
+  .ui.app {
+    width: auto;
+    display: block;
+  }
+  .ui.tela {
+    width: auto;
+    padding: 14px 12px 18px;
+  }
+  .lateral {
+    display: none;
+  }
+  .app-topo {
+    padding: 10px 12px;
+    gap: 10px;
+  }
+  .busca {
+    width: auto;
+    flex: 1;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .app-usuario > span:last-child {
+    display: none;
+  }
+  .indicadores {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 10px;
+  }
+  .tela-zoom [style*="grid-template-columns"]:not(.papel-linha):not(.papel-grade) {
+    grid-template-columns: minmax(0,1fr) !important;
+  }
+  .tabela-topo,
+  .linha {
+    grid-template-columns: minmax(0,1fr) 48px auto;
+    gap: 8px;
+  }
+  .semana,
+  .calendario {
+    overflow-x: auto;
+    grid-template-columns: repeat(7,84px);
+  }
+  .ui.tela [style*="justify-content: space-between"],
+  .ui.tela [style*="justify-content: space-between"] > div {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .ui .app-titulo {
+    white-space: nowrap;
+  }
+  .indicador {
+    gap: 10px;
+    padding: 12px;
+  }
+  .indicador-icone {
+    width: 34px;
+    height: 34px;
+  }
+  .indicador small {
+    white-space: normal;
+    line-height: 1.25;
+  }
+  .tela-zoom .tarja {
+    max-width: 100%;
+  }
+}
