@@ -1,0 +1,1543 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SIGOS — Gestão de ordens de serviço e acompanhamento de obras</title>
+  <meta name="description" content="O SIGOS centraliza ordens de serviço, e-mails, registros fotográficos e relatórios RAE para tornar o acompanhamento das obras mais organizado.">
+  <meta name="theme-color" content="#090909">
+  <meta property="og:title" content="SIGOS — Gestão de ordens de serviço e acompanhamento de obras">
+  <meta property="og:description" content="O SIGOS centraliza ordens de serviço, e-mails, registros fotográficos e relatórios RAE para tornar o acompanhamento das obras mais organizado.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/logo-sigos.png">
+  <link rel="icon" type="image/png" href="assets/img/logo-sigos.png">
+  <link rel="apple-touch-icon" href="assets/img/logo-sigos.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;family=Geist+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="pagina" id="topo">
+    <div class="aviso">
+      <div class="container">
+        <a href="#produto">
+          <span class="etiqueta">RAE</span>
+          <span>Gere o Relatório de Acompanhamento de Evolução de Obra a partir da própria OS</span>
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+    <header class="cabecalho">
+      <div class="container">
+        <div class="cabecalho-interno">
+          <a class="logo" href="#topo" aria-label="SIGOS — voltar ao início"><img src="assets/img/logo-sigos.png" alt="" width="30" height="30">SIGOS</a>
+          <nav class="menu" aria-label="Seções da página">
+            <div class="submenu">
+              <a href="#funcionalidades" aria-haspopup="true">Produto <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 3.5l3 3 3-3"></path></svg></a>
+              <div class="submenu-painel">
+                <div class="submenu-coluna">
+                  <h5>Centralizar</h5>
+                  <a href="#funcionalidades">
+                    <b>Dashboard operacional</b>
+                    <span>Indicadores e visão geral</span>
+                  </a>
+                  <a href="#funcionalidades">
+                    <b>Monitoramento de e-mails</b>
+                    <span>Mensagens recebidas e pendentes</span>
+                  </a>
+                </div>
+                <div class="submenu-coluna">
+                  <h5>Acompanhar</h5>
+                  <a href="#funcionalidades">
+                    <b>Ordens de serviço</b>
+                    <span>Status, prazos e histórico</span>
+                  </a>
+                  <a href="#funcionalidades"><b>Agenda</b><span>As OS no calendário</span></a>
+                </div>
+                <div class="submenu-coluna">
+                  <h5>Documentar</h5>
+                  <a href="#funcionalidades">
+                    <b>Registros fotográficos</b>
+                    <span>Fotos vinculadas à OS</span>
+                  </a>
+                  <a href="#funcionalidades">
+                    <b>Geração de RAE</b>
+                    <span>Relatório a partir da OS</span>
+                  </a>
+                </div>
+                <div class="submenu-rodape">
+                  <span>Veja as telas do sistema em funcionamento</span>
+                  <a class="link-texto" href="#produto">Por dentro do SIGOS →</a>
+                </div>
+              </div>
+            </div>
+            <a href="#como-funciona">Como funciona</a>
+          </nav>
+          <div class="acoes">
+            <a class="botao botao-primario pequeno" href="#contato">Entrar em contato</a>
+          </div>
+          <details class="menu-mobile">
+            <summary aria-label="Abrir menu de navegação">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 5h14M2 9h14M2 13h14"></path></svg>
+            </summary>
+            <div class="menu-mobile-painel">
+              <a class="menu-mobile-link" href="#funcionalidades">Funcionalidades <span class="mono" style="color: #8A8A8A; font-size: 12px">→</span></a>
+              <a class="menu-mobile-link" href="#produto">Por dentro do SIGOS <span class="mono" style="color: #8A8A8A; font-size: 12px">→</span></a>
+              <a class="menu-mobile-link" href="#como-funciona">Como funciona <span class="mono" style="color: #8A8A8A; font-size: 12px">→</span></a>
+              <div class="menu-mobile-botoes">
+                <a class="botao botao-primario" href="#contato">Entrar em contato</a>
+              </div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-fundo" aria-hidden="true"></div>
+        <div class="container">
+          <div class="trilhos">
+            <svg class="estrela brilho-a" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C12 7 17 12 24 12C17 12 12 17 12 24C12 17 7 12 0 12C7 12 12 7 12 0Z"></path></svg>
+            <svg class="estrela brilho-b" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C12 7 17 12 24 12C17 12 12 17 12 24C12 17 7 12 0 12C7 12 12 7 12 0Z"></path></svg>
+            <div class="hero-conteudo">
+              <p class="sobretitulo centro entrada" style="margin: 0"><i></i>Sistema integrado de gestão de
+                ordens de serviço</p>
+              <h1 class="titulo-principal entrada atraso-1" id="hero-title">Mais controle sobre <span class="suave">cada</span>
+                ordem de serviço.</h1>
+              <p class="chamada entrada atraso-2">O SIGOS centraliza ordens de serviço, e-mails, registros
+                fotográficos e relatórios em um único ambiente — para acompanhar cada obra com mais organização.</p>
+              <div class="ctas entrada atraso-3">
+                <a class="botao botao-primario" href="#contato">Entrar em contato <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4"></path></svg></a>
+                <a class="botao botao-secundario" href="#como-funciona">Ver como funciona</a>
+              </div>
+            </div>
+            <div class="vitrine entrada atraso-4">
+              <div class="pilha">
+                <div class="moldura">
+                  <div class="moldura-barra">
+                    <span class="esquerda"><span class="pontos"><i></i><i></i><i></i></span>SIGOS / Dashboard</span>
+                    <span>Dados demonstrativos</span>
+                  </div>
+                  <div class="tela-zoom">
+                    <div class="ui app" role="img" aria-label="Dashboard do SIGOS com dados demonstrativos: 2 e-mails recebidos, 1 pendente, 2 ordens de serviço em andamento e 1 concluída; lista de e-mails, lista de ordens de serviço, recebimento mensal e agenda da semana.">
+                      <aside class="lateral">
+                        <div class="lateral-logo"><img src="assets/img/logo-sigos.png" alt="" width="34" height="34">SIGOS</div>
+                        <div class="lateral-empresa">
+                          <span class="rotulo">Empresa</span>
+                          <b>EMPRESA DEMO</b>
+                        </div>
+                        <div class="lateral-menu">
+                          <span class="rotulo">Menu</span>
+                          <span class="lateral-item ativo"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="1" y="1" width="6" height="8"></rect><rect x="9" y="1" width="6" height="5"></rect><rect x="1" y="11" width="6" height="4"></rect><rect x="9" y="8" width="6" height="7"></rect></svg>Dashboard</span>
+                          <span class="lateral-item"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="1.5" y="3" width="13" height="10" rx="1"></rect><path d="M2 4l6 5 6-5"></path></svg>Emails</span>
+                          <span class="lateral-item"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="2.5" width="10" height="12" rx="1"></rect><path d="M6 1.5h4v2.5H6zM5.5 8h5M5.5 11h3"></path></svg>Ordens
+                            de Serviço</span>
+                          <span class="lateral-item"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="2" y="3" width="12" height="11" rx="1"></rect><path d="M2 6.5h12M5 1.5v3M11 1.5v3"></path></svg>Agenda</span>
+                          <span class="lateral-item"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3.5" y="1.5" width="9" height="13"></rect><path d="M6 4.5h1M9 4.5h1M6 7.5h1M9 7.5h1M6 10.5h1M9 10.5h1"></path></svg>Painel
+                            da Empresa</span>
+                          <span class="lateral-item"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="8" cy="8" r="2.2"></circle><path d="M8 1.5v2M8 12.5v2M1.5 8h2M12.5 8h2M3.4 3.4l1.4 1.4M11.2 11.2l1.4 1.4M3.4 12.6l1.4-1.4M11.2 4.8l1.4-1.4"></path></svg>Configurações</span>
+                        </div>
+                        <div class="lateral-rodape"><span class="avatar">U</span>usuario@exemplo.com</div>
+                      </aside>
+                      <div class="app-principal">
+                        <div class="app-topo">
+                          <span class="busca"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="7" cy="7" r="4.5"></circle><path d="M10.5 10.5l3.5 3.5"></path></svg>Buscar
+                            emails, ordens de serviço...</span>
+                          <span class="app-usuario">
+                            <span class="sino">
+                              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 11V7a4 4 0 018 0v4l1 1.5H3zM6.5 14h3"></path></svg>
+                            </span>
+                            <span class="avatar">U</span>
+                            <span><b>Usuário Demo</b><small>Administrador</small></span>
+                          </span>
+                        </div>
+                        <div class="app-corpo">
+                          <div class="app-titulo">Dashboard</div>
+                          <div class="indicadores">
+                            <div class="indicador">
+                              <span class="indicador-icone cor-azul">
+                                <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1.5 3.5h13v9h-13z" opacity=".35"></path><path d="M1.5 3.5L8 8.5l6.5-5" fill="none" stroke="currentColor" stroke-width="1.5"></path></svg>
+                              </span>
+                              <span><small>Emails Recebidos</small><b class="cor-azul">2</b></span>
+                            </div>
+                            <div class="indicador">
+                              <span class="indicador-icone cor-laranja">
+                                <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="3" y="2.5" width="10" height="12" rx="1.5"></rect></svg>
+                              </span>
+                              <span>
+                                <small>Emails Pendentes</small>
+                                <b class="cor-laranja">1</b>
+                              </span>
+                            </div>
+                            <div class="indicador">
+                              <span class="indicador-icone cor-roxo">
+                                <svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M13 6.5A5 5 0 003.6 5M3 9.5A5 5 0 0012.4 11M3.5 2.5V5H6M12.5 13.5V11H10"></path></svg>
+                              </span>
+                              <span><small>OS Em Andamento</small><b class="cor-roxo">2</b></span>
+                            </div>
+                            <div class="indicador">
+                              <span class="indicador-icone cor-verde">
+                                <svg width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="currentColor"></circle><path d="M5 8.2l2 2 4-4" fill="none" stroke="#15171C" stroke-width="1.6"></path></svg>
+                              </span>
+                              <span><small>OS Concluídas</small><b class="cor-verde">1</b></span>
+                            </div>
+                          </div>
+                          <div style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 14px">
+                            <div class="painel">
+                              <div class="painel-topo">
+                                <b>Emails Recebidos</b>
+                                <span class="link-azul">Ver todos</span>
+                              </div>
+                              <div class="email">
+                                <span class="email-avatar">ER</span>
+                                <div class="email-texto">
+                                  <b>Engenharia Regional</b>
+                                  <span>Nova ordem de serviço — Acompanhamento de Obra</span>
+                                  <small>engenharia@exemplo.com.br</small>
+                                </div>
+                                <div class="email-meta">14/10 · 09:12<span class="selo selo-laranja">Pendente</span></div>
+                              </div>
+                              <div class="email" style="border-bottom: 0">
+                                <span class="email-avatar">AT</span>
+                                <div class="email-texto">
+                                  <b>Atendimento Demo</b>
+                                  <span>Documentação complementar da vistoria</span>
+                                  <small>atendimento@exemplo.com.br</small>
+                                </div>
+                                <div class="email-meta">13/10 · 16:40</div>
+                              </div>
+                              <div style="flex: 1; min-height: 40px"></div>
+                            </div>
+                            <div class="painel">
+                              <div class="painel-topo">
+                                <span class="grupo">
+                                  <b>Ordens de Serviço</b>
+                                  <span class="mini-botao">Gerar OS</span>
+                                </span>
+                                <span class="link-azul">Ver todas</span>
+                              </div>
+                              <div class="tabela-topo">
+                                <span>SERVIÇO</span>
+                                <span>CÓDIGO</span>
+                                <span>STATUS</span>
+                              </div>
+                              <div class="linha">
+                                <span>
+                                  <b>OS-003</b>
+                                  <small>Acompanhamento de Obra</small>
+                                  <small>•••.•••.•••-•• – CLIENTE DEMO C</small>
+                                </span>
+                                <span class="codigo">E401</span>
+                                <span class="selo selo-roxo">Em andamento</span>
+                              </div>
+                              <div class="linha verde">
+                                <span>
+                                  <b>OS-002</b>
+                                  <small>Acompanhamento de Obra</small>
+                                  <small>•••.•••.•••-•• – CLIENTE DEMO B</small>
+                                </span>
+                                <span class="codigo">A413</span>
+                                <span class="selo selo-verde">Concluída</span>
+                              </div>
+                              <div class="linha" style="border-bottom: 0">
+                                <span>
+                                  <b>OS-001</b>
+                                  <small>Acompanhamento de Obra</small>
+                                  <small>•••.•••.•••-•• – CLIENTE DEMO A</small>
+                                </span>
+                                <span class="codigo">E401</span>
+                                <span class="selo selo-roxo">Em andamento</span>
+                              </div>
+                              <div style="border-top: 1px solid #2A2E36; padding: 12px; text-align: center">
+                                <span class="link-azul">Ver todas as ordens →</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div style="display: grid; grid-template-columns: 380px minmax(0, 1fr); gap: 14px">
+                            <div class="painel">
+                              <div class="painel-topo">
+                                <b>Recebimento Mensal</b>
+                                <span class="segmentos">
+                                  <span class="ativo" style="background: #2A2E36">OS Concluída</span>
+                                  <span>OS Total</span>
+                                </span>
+                              </div>
+                              <div style="padding: 18px; text-align: center">
+                                <span class="rotulo" style="font-size: 11px">Outubro</span>
+                                <div style="font-size: 30px; font-weight: 700; color: #22C55E; letter-spacing: -.02em">R$
+                                  480,00</div>
+                                <div style="font-size: 11.5px; color: #8B909B; margin-top: 4px">1 OS concluída
+                                  no mês</div>
+                              </div>
+                            </div>
+                            <div class="painel">
+                              <div class="painel-topo">
+                                <b style="color: #3B82F6">Agenda — Esta Semana</b>
+                                <span class="link-azul">Ver agenda completa →</span>
+                              </div>
+                              <div class="semana">
+                                <div class="dia-semana">SEG<b>12</b></div>
+                                <div class="dia-semana">TER<b>13</b></div>
+                                <div class="dia-semana ativo">QUA<b>14</b><span class="evento">OS-001 · E401</span><span class="evento verde">OS-002
+                                  · A413</span></div>
+                                <div class="dia-semana">QUI<b>15</b></div>
+                                <div class="dia-semana">SEX<b>16</b><span class="evento">OS-003 · E401</span></div>
+                                <div class="dia-semana">SÁB<b>17</b></div>
+                                <div class="dia-semana">DOM<b>18</b></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="vitrine-legenda">
+                <span>Interface real do SIGOS · dados fictícios</span>
+                <span>Informações sensíveis ocultadas</span>
+              </div>
+            </div>
+            <div class="modulos-titulo">
+              <p class="sobretitulo centro" style="margin: 0"><i></i>Um sistema · seis frentes de trabalho</p>
+            </div>
+            <nav class="modulos" aria-label="Módulos do SIGOS">
+              <a class="modulo" href="#funcionalidades"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="1" y="1" width="6" height="8"></rect><rect x="9" y="1" width="6" height="5"></rect><rect x="1" y="11" width="6" height="4"></rect><rect x="9" y="8" width="6" height="7"></rect></svg>Dashboard</a>
+              <a class="modulo" href="#funcionalidades"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="2.5" width="10" height="12" rx="1"></rect><path d="M6 1.5h4v2.5H6zM5.5 8h5M5.5 11h3"></path></svg>Ordens
+                de serviço</a>
+              <a class="modulo" href="#funcionalidades"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="1.5" y="3" width="13" height="10" rx="1"></rect><path d="M2 4l6 5 6-5"></path></svg>E-mails</a>
+              <a class="modulo" href="#funcionalidades"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1"></rect><circle cx="9" cy="10" r="2"></circle><path d="M3 17l5-5 5 5 3-3 5 5"></path></svg>Fotos</a>
+              <a class="modulo" href="#funcionalidades"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3.5 1.5h6l3 3v10h-9z"></path><path d="M9.5 1.5v3h3M5.5 8.5h5M5.5 11h5"></path></svg>RAE</a>
+              <a class="modulo" href="#funcionalidades"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="2" y="3" width="12" height="11" rx="1"></rect><path d="M2 6.5h12M5 1.5v3M11 1.5v3"></path></svg>Agenda</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+
+      <section class="secao" id="problema" aria-labelledby="problema-title">
+        <div class="container">
+          <div class="trilhos cruzes">
+            <div class="espacamento" style="padding-bottom: 72px">
+              <div class="cabecalho-duplo revelar" style="margin-bottom: 0">
+                <div>
+                  <p class="sobretitulo"><i></i>[ 01 ] O problema</p>
+                  <h2 class="titulo-secao" id="problema-title">Informações dispersas dificultam <span class="suave">o
+                    controle das obras.</span></h2>
+                </div>
+                <p class="chamada">Quando cada informação está em um lugar diferente, acompanhar uma ordem
+                  de serviço passa a depender de buscas, conferências e memória.</p>
+              </div>
+            </div>
+            <div class="problemas">
+              <div class="problema revelar">
+                <div class="numero"><span>01</span><span>—</span></div>
+                <h3>Informações fragmentadas</h3>
+                <p>Dados importantes ficam espalhados entre e-mails, arquivos e registros fotográficos.</p>
+                <div class="fontes">
+                  <span>E-mails</span>
+                  <span>Arquivos</span>
+                  <span>Fotos</span>
+                </div>
+              </div>
+              <div class="problema revelar">
+                <div class="numero"><span>02</span><span>—</span></div>
+                <h3>Acompanhamento trabalhoso</h3>
+                <p>Consultar o andamento de diferentes ordens de serviço pode exigir buscas manuais e conferências
+                  repetitivas.</p>
+                <div class="fontes">
+                  <span>Status</span>
+                  <span>Prazos</span>
+                  <span>Pendências</span>
+                </div>
+              </div>
+              <div class="problema revelar">
+                <div class="numero"><span>03</span><span>—</span></div>
+                <h3>Documentação descentralizada</h3>
+                <p>Organizar registros e preparar relatórios demanda mais trabalho quando as informações não
+                  estão centralizadas.</p>
+                <div class="fontes"><span>Registros</span><span>Relatórios</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="secao" id="perguntas" aria-labelledby="perg-title">
+        <div class="container">
+          <div class="trilhos cruzes">
+            <div class="espacamento">
+              <div class="cabecalho-centro revelar">
+                <p class="sobretitulo centro"><i></i>[ 02 ] No dia a dia</p>
+                <h2 class="titulo-secao centro" id="perg-title">As respostas que a operação procura, <span class="suave">em
+                  um só lugar.</span></h2>
+                <p class="chamada centro">Perguntas que antes exigiam abrir caixas de e-mail, pastas e planilhas
+                  passam a ter um ponto de consulta no SIGOS.</p>
+              </div>
+              <div class="perguntas">
+                <div class="pergunta revelar">
+                  <span class="seta">&gt;</span>
+                  <span class="texto">Quais ordens de serviço estão em andamento?</span>
+                  <span class="resposta"><i></i>Dashboard</span>
+                </div>
+                <div class="pergunta revelar">
+                  <span class="seta">&gt;</span>
+                  <span class="texto">Qual OS está com o prazo crítico ou vencido?</span>
+                  <span class="resposta"><i></i>Agenda</span>
+                </div>
+                <div class="pergunta revelar">
+                  <span class="seta">&gt;</span>
+                  <span class="texto">Quais e-mails ainda estão pendentes?</span>
+                  <span class="resposta"><i></i>E-mails</span>
+                </div>
+                <div class="pergunta revelar">
+                  <span class="seta">&gt;</span>
+                  <span class="texto">Onde estão as fotos da obra desta ordem?</span>
+                  <span class="resposta"><i></i>Fotos</span>
+                </div>
+                <div class="pergunta revelar">
+                  <span class="seta">&gt;</span>
+                  <span class="texto">O que mudou nesta OS, quem alterou e quando?</span>
+                  <span class="resposta"><i></i>Histórico</span>
+                </div>
+                <div class="pergunta revelar">
+                  <span class="seta">&gt;</span>
+                  <span class="texto">As informações para o RAE já estão reunidas?</span>
+                  <span class="resposta"><i></i>Gerar RAE</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="secao" id="visao" aria-labelledby="visao-title">
+        <div class="container">
+          <div class="trilhos cruzes">
+            <div class="espacamento">
+              <div class="cabecalho-duplo revelar">
+                <div>
+                  <p class="sobretitulo"><i></i>[ 03 ] Visão operacional</p>
+                  <h2 class="titulo-secao" id="visao-title">Ordens e mensagens lado a lado, <span class="suave">sempre
+                    atualizadas.</span></h2>
+                </div>
+                <p class="chamada">Listas objetivas, com código de atividade, status por cor e acesso direto
+                  aos detalhes de cada registro.</p>
+              </div>
+              <div class="visoes">
+                <div class="moldura revelar">
+                  <div class="moldura-barra">
+                    <span class="esquerda"><span class="pontos"><i></i><i></i><i></i></span>Ordens de serviço</span>
+                    <span>3 registros</span>
+                  </div>
+                  <div class="visao-interna ui" role="img" aria-label="Lista de ordens de serviço fictícias com código de atividade e status.">
+                    <div class="painel">
+                      <div class="tabela-topo">
+                        <span>SERVIÇO</span>
+                        <span>CÓDIGO</span>
+                        <span>STATUS</span>
+                      </div>
+                      <div class="linha">
+                        <span>
+                          <b>OS-003</b>
+                          <small>Acompanhamento de Obra</small>
+                          <small>•••.•••.•••-•• – CLIENTE DEMO C</small>
+                        </span>
+                        <span class="codigo">E401</span>
+                        <span class="selo selo-roxo">Em andamento</span>
+                      </div>
+                      <div class="linha verde">
+                        <span>
+                          <b>OS-002</b>
+                          <small>Acompanhamento de Obra</small>
+                          <small>•••.•••.•••-•• – CLIENTE DEMO B</small>
+                        </span>
+                        <span class="codigo">A413</span>
+                        <span class="selo selo-verde">Concluída</span>
+                      </div>
+                      <div class="linha" style="border-bottom: 0">
+                        <span>
+                          <b>OS-001</b>
+                          <small>Acompanhamento de Obra</small>
+                          <small>•••.•••.•••-•• – CLIENTE DEMO A</small>
+                        </span>
+                        <span class="codigo">E401</span>
+                        <span class="selo selo-roxo">Em andamento</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="moldura revelar">
+                  <div class="moldura-barra">
+                    <span class="esquerda"><span class="pontos"><i></i><i></i><i></i></span>E-mails recebidos</span>
+                    <span>1 pendente</span>
+                  </div>
+                  <div class="visao-interna ui" role="img" aria-label="Lista de e-mails fictícios recebidos, um deles pendente.">
+                    <div class="painel">
+                      <div class="email">
+                        <span class="email-avatar">ER</span>
+                        <div class="email-texto">
+                          <b>Engenharia Regional</b>
+                          <span>Nova ordem de serviço — Acompanhamento de Obra</span>
+                          <small>engenharia@exemplo.com.br</small>
+                        </div>
+                        <div class="email-meta">14/10 · 09:12<span class="selo selo-laranja">Pendente</span></div>
+                      </div>
+                      <div class="email" style="border-bottom: 0">
+                        <span class="email-avatar">AT</span>
+                        <div class="email-texto">
+                          <b>Atendimento Demo</b>
+                          <span>Documentação complementar da vistoria</span>
+                          <small>atendimento@exemplo.com.br</small>
+                        </div>
+                        <div class="email-meta">13/10 · 16:40</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tres-colunas">
+                <div class="revelar">
+                  <span class="icone-mais">
+                    <svg width="10" height="10" viewBox="0 0 10 10" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M5 1v8M1 5h8"></path></svg>
+                  </span>
+                  <div>
+                    <b>Status por cor</b>
+                    <p>Em andamento, concluída e pendente identificados à primeira vista.</p>
+                  </div>
+                </div>
+                <div class="revelar">
+                  <span class="icone-mais">
+                    <svg width="10" height="10" viewBox="0 0 10 10" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M5 1v8M1 5h8"></path></svg>
+                  </span>
+                  <div>
+                    <b>Código de atividade</b>
+                    <p>Cada OS exibe o código que a classifica, como E401 ou A413.</p>
+                  </div>
+                </div>
+                <div class="revelar">
+                  <span class="icone-mais">
+                    <svg width="10" height="10" viewBox="0 0 10 10" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M5 1v8M1 5h8"></path></svg>
+                  </span>
+                  <div>
+                    <b>Busca unificada</b>
+                    <p>Uma única barra para buscar e-mails e ordens de serviço.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="secao" id="produto" aria-labelledby="produto-title">
+        <div class="container">
+          <div class="trilhos cruzes">
+            <div class="espacamento" style="padding-bottom: 64px">
+              <div class="cabecalho-centro revelar" style="margin-bottom: 0">
+                <p class="sobretitulo centro"><i></i>[ 04 ] Por dentro do SIGOS</p>
+                <h2 class="titulo-secao centro" id="produto-title">Cada etapa da obra, <span class="suave">em
+                  uma tela organizada.</span></h2>
+                <p class="chamada centro">Selecione uma área para ver a interface. Dados demonstrativos; informações
+                  sensíveis foram ocultadas.</p>
+              </div>
+            </div>
+            <div class="abas" role="tablist" aria-label="Telas do SIGOS">
+              <button type="button" role="tab" id="aba-os" class="aba ativo" aria-selected="true" aria-controls="painel-os" tabindex="0">
+                <span class="aba-numero">Tela 01</span>
+                <span class="aba-titulo">Ordem de serviço</span>
+                <span class="aba-descricao">Status, prazo, fotos e detalhes</span>
+              </button>
+              <button type="button" role="tab" id="aba-em" class="aba" aria-selected="false" aria-controls="painel-em" tabindex="-1">
+                <span class="aba-numero">Tela 02</span>
+                <span class="aba-titulo">E-mails</span>
+                <span class="aba-descricao">Mensagens recebidas e pendentes</span>
+              </button>
+              <button type="button" role="tab" id="aba-ft" class="aba" aria-selected="false" aria-controls="painel-ft" tabindex="-1">
+                <span class="aba-numero">Tela 03</span>
+                <span class="aba-titulo">Registros fotográficos</span>
+                <span class="aba-descricao">Fotos e histórico da OS</span>
+              </button>
+              <button type="button" role="tab" id="aba-rae" class="aba" aria-selected="false" aria-controls="painel-rae" tabindex="-1">
+                <span class="aba-numero">Tela 04</span>
+                <span class="aba-titulo">Geração de RAE</span>
+                <span class="aba-descricao">Relatório em etapas</span>
+              </button>
+              <button type="button" role="tab" id="aba-ag" class="aba" aria-selected="false" aria-controls="painel-ag" tabindex="-1">
+                <span class="aba-numero">Tela 05</span>
+                <span class="aba-titulo">Agenda</span>
+                <span class="aba-descricao">As OS no calendário</span>
+              </button>
+            </div>
+            <div class="demo">
+              <div class="moldura">
+                <div class="moldura-barra">
+                  <span class="esquerda">
+                    <span class="pontos"><i></i><i></i><i></i></span>
+                    <span>SIGOS / <span id="aba-rotulo">Ordem de serviço</span></span>
+                  </span>
+                  <span>Dados demonstrativos</span>
+                </div>
+                <div class="tela-zoom">
+                  <div role="tabpanel" id="painel-os" aria-labelledby="aba-os" data-rotulo="Ordem de serviço" tabindex="0">
+                    <div class="ui tela tela-entrada" role="img" aria-label="Tela de detalhes de uma ordem de serviço com status, prazo de execução, fotos, ações e detalhes; dados pessoais ocultados.">
+                      <div style="font-size: 12px; color: #8B909B; margin-bottom: 14px">Dashboard / Ordens
+                        de Serviço / <b style="color: #ECEEF2">OS-001</b></div>
+                      <div style="display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 16px">
+                        <div style="display: flex; flex-direction: column; gap: 14px">
+                          <div class="painel" style="padding: 18px 20px">
+                            <div style="display: flex; gap: 8px; align-items: center">
+                              <span style="color: #8B909B; margin-right: 8px">←</span>
+                              <span class="selo selo-id">OS-001</span>
+                              <span class="codigo">E401</span>
+                              <span class="selo selo-roxo">Em andamento</span>
+                            </div>
+                            <div style="font-size: 19px; font-weight: 600; margin: 12px 0 8px 22px">Acompanhamento
+                              de Obra</div>
+                            <div style="margin-left: 22px">
+                              <span class="tarja" style="width: 300px"></span>
+                            </div>
+                            <div style="border-top: 1px solid #2A2E36; margin-top: 16px; padding-top: 14px; display: flex; gap: 22px; align-items: center; font-size: 12px; color: #A9ADB6">
+                              <span style="display: flex; gap: 8px; align-items: center">Cliente <span class="tarja" style="width: 150px"></span></span>
+                              <span>14/10/2026</span>
+                              <span style="display: flex; gap: 8px; align-items: center">R$ <span class="tarja" style="width: 50px"></span></span>
+                              <span style="display: flex; gap: 8px; align-items: center">Nº OS <span class="tarja" style="width: 170px"></span></span>
+                            </div>
+                          </div>
+                          <div class="painel" style="padding: 16px 20px">
+                            <div style="display: flex; justify-content: space-between; font-size: 11px">
+                              <span class="rotulo" style="margin: 0">Prazo de execução</span>
+                              <b>4 dia(s) restante(s) de 6</b>
+                            </div>
+                            <div style="height: 9px; border-radius: 6px; background: #E6E8EC; margin: 10px 0 8px; overflow: hidden">
+                              <div style="width: 33%; height: 100%; background: #22C55E"></div>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; font-size: 10.5px; color: #8B909B">
+                              <span>Início: 14/10/2026</span>
+                              <span>33% do prazo utilizado</span>
+                            </div>
+                          </div>
+                          <div class="painel">
+                            <div class="painel-topo">
+                              <span class="grupo">
+                                <b>Fotos</b>
+                                <span class="selo selo-id" style="height: 18px">3</span>
+                              </span>
+                              <span class="grupo">
+                                <span class="mini-botao" style="height: 30px; padding: 0 12px">Baixar todas</span>
+                                <span class="mini-botao" style="height: 30px; padding: 0 12px; background: #2563EB; color: #fff; border-color: #2563EB">Upload</span>
+                              </span>
+                            </div>
+                            <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; padding: 16px">
+                              <div class="foto">
+                                <div class="foto-imagem">
+                                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1"></rect><circle cx="9" cy="10" r="2"></circle><path d="M3 17l5-5 5 5 3-3 5 5"></path></svg>
+                                </div>
+                                <div class="foto-meta"><b>fachada</b><small>14/10/2026</small></div>
+                                <div class="foto-acoes">
+                                  <span>◉</span>
+                                  <span>✎</span>
+                                  <span class="excluir">✕</span>
+                                </div>
+                              </div>
+                              <div class="foto">
+                                <div class="foto-imagem">
+                                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1"></rect><circle cx="9" cy="10" r="2"></circle><path d="M3 17l5-5 5 5 3-3 5 5"></path></svg>
+                                </div>
+                                <div class="foto-meta"><b>cozinha</b><small>14/10/2026</small></div>
+                                <div class="foto-acoes">
+                                  <span>◉</span>
+                                  <span>✎</span>
+                                  <span class="excluir">✕</span>
+                                </div>
+                              </div>
+                              <div class="foto">
+                                <div class="foto-imagem">
+                                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1"></rect><circle cx="9" cy="10" r="2"></circle><path d="M3 17l5-5 5 5 3-3 5 5"></path></svg>
+                                </div>
+                                <div class="foto-meta"><b>placa</b><small>14/10/2026</small></div>
+                                <div class="foto-acoes">
+                                  <span>◉</span>
+                                  <span>✎</span>
+                                  <span class="excluir">✕</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 14px">
+                          <div class="painel">
+                            <div class="painel-topo"><b>Ações</b></div>
+                            <div style="padding: 16px; display: flex; flex-direction: column; gap: 10px">
+                              <span class="botao-app botao-app-verde">✓ Concluir OS</span>
+                              <span class="botao-app botao-app-azul">Gerar RAE</span>
+                              <span class="botao-app botao-app-contorno">← Voltar à lista</span>
+                            </div>
+                          </div>
+                          <div class="painel">
+                            <div class="painel-topo"><b>Detalhes da OS</b></div>
+                            <dl class="detalhes" style="padding: 2px 18px 18px; margin: 0">
+                              <dt>Status</dt>
+                              <dd><span class="selo selo-roxo">Em andamento</span></dd>
+                              <dt>ID</dt>
+                              <dd style="font-family: 'Geist Mono', monospace; font-weight: 600">OS-001</dd>
+                              <dt>Número OS</dt>
+                              <dd><span class="tarja" style="width: 180px"></span></dd>
+                              <dt>Tipo de serviço</dt>
+                              <dd>Acompanhamento de Obra</dd>
+                              <dt>Código de atividade</dt>
+                              <dd><span class="codigo">E401</span></dd>
+                              <dt>Cliente</dt>
+                              <dd><span class="tarja" style="width: 210px"></span></dd>
+                              <dt>Endereço</dt>
+                              <dd><span class="tarja" style="width: 240px"></span></dd>
+                            </dl>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div role="tabpanel" id="painel-em" aria-labelledby="aba-em" data-rotulo="E-mails" tabindex="0" hidden>
+                    <div class="ui tela tela-entrada" role="img" aria-label="Área de e-mails do dashboard: indicadores de e-mails recebidos e pendentes e lista com dois e-mails fictícios.">
+                      <div class="app-titulo" style="margin-bottom: 16px">Dashboard</div>
+                      <div style="display: grid; grid-template-columns: 320px minmax(0, 1fr); gap: 16px">
+                        <div style="display: flex; flex-direction: column; gap: 14px">
+                          <div class="indicador">
+                            <span class="indicador-icone cor-azul">
+                              <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1.5 3.5h13v9h-13z" opacity=".35"></path><path d="M1.5 3.5L8 8.5l6.5-5" fill="none" stroke="currentColor" stroke-width="1.5"></path></svg>
+                            </span>
+                            <span><small>Emails Recebidos</small><b class="cor-azul">2</b></span>
+                          </div>
+                          <div class="indicador">
+                            <span class="indicador-icone cor-laranja">
+                              <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="3" y="2.5" width="10" height="12" rx="1.5"></rect></svg>
+                            </span>
+                            <span><small>Emails Pendentes</small><b class="cor-laranja">1</b></span>
+                          </div>
+                          <div class="painel" style="padding: 16px; font-size: 12px; color: #A9ADB6; line-height: 1.55">Mensagens
+                            relacionadas às ordens de serviço ficam reunidas no painel, junto ao restante
+                            do acompanhamento.</div>
+                        </div>
+                        <div class="painel">
+                          <div class="painel-topo">
+                            <b>Emails Recebidos</b>
+                            <span class="link-azul">Ver todos</span>
+                          </div>
+                          <div class="email" style="padding: 18px">
+                            <span class="email-avatar">ER</span>
+                            <div class="email-texto">
+                              <b>Engenharia Regional</b>
+                              <span>Nova ordem de serviço — Acompanhamento de Obra</span>
+                              <small>engenharia@exemplo.com.br</small>
+                            </div>
+                            <div class="email-meta">14/10/2026 · 09:12<span class="selo selo-laranja">Pendente</span></div>
+                          </div>
+                          <div class="email" style="padding: 18px">
+                            <span class="email-avatar">AT</span>
+                            <div class="email-texto">
+                              <b>Atendimento Demo</b>
+                              <span>Documentação complementar da vistoria</span>
+                              <small>atendimento@exemplo.com.br</small>
+                            </div>
+                            <div class="email-meta">13/10/2026 · 16:40</div>
+                          </div>
+                          <div style="padding: 48px 16px; text-align: center; color: #5C616B; font-size: 12px">Fim
+                            da lista</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div role="tabpanel" id="painel-ft" aria-labelledby="aba-ft" data-rotulo="Registros fotográficos" tabindex="0" hidden>
+                    <div class="ui tela tela-entrada" role="img" aria-label="Registros fotográficos de uma ordem de serviço com ações de visualizar, editar, excluir, baixar e enviar, e histórico de fotos adicionadas.">
+                      <div style="display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 16px">
+                        <div class="painel">
+                          <div class="painel-topo">
+                            <span class="grupo">
+                              <b>Fotos</b>
+                              <span class="selo selo-id" style="height: 18px">3</span>
+                            </span>
+                            <span class="grupo">
+                              <span class="mini-botao" style="height: 30px; padding: 0 12px">Baixar todas</span>
+                              <span class="mini-botao" style="height: 30px; padding: 0 12px; background: #2563EB; color: #fff; border-color: #2563EB">Upload</span>
+                            </span>
+                          </div>
+                          <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; padding: 18px">
+                            <div class="foto">
+                              <div class="foto-imagem" style="height: 150px">
+                                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1"></rect><circle cx="9" cy="10" r="2"></circle><path d="M3 17l5-5 5 5 3-3 5 5"></path></svg>
+                              </div>
+                              <div class="foto-meta"><b>fachada</b><small>14/10/2026</small></div>
+                              <div class="foto-acoes">
+                                <span>◉</span>
+                                <span>✎</span>
+                                <span class="excluir">✕</span>
+                              </div>
+                            </div>
+                            <div class="foto">
+                              <div class="foto-imagem" style="height: 150px">
+                                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1"></rect><circle cx="9" cy="10" r="2"></circle><path d="M3 17l5-5 5 5 3-3 5 5"></path></svg>
+                              </div>
+                              <div class="foto-meta"><b>cozinha</b><small>14/10/2026</small></div>
+                              <div class="foto-acoes">
+                                <span>◉</span>
+                                <span>✎</span>
+                                <span class="excluir">✕</span>
+                              </div>
+                            </div>
+                            <div class="foto">
+                              <div class="foto-imagem" style="height: 150px">
+                                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1"></rect><circle cx="9" cy="10" r="2"></circle><path d="M3 17l5-5 5 5 3-3 5 5"></path></svg>
+                              </div>
+                              <div class="foto-meta"><b>placa</b><small>14/10/2026</small></div>
+                              <div class="foto-acoes">
+                                <span>◉</span>
+                                <span>✎</span>
+                                <span class="excluir">✕</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div style="padding: 0 18px 16px; font-size: 11px; color: #5C616B">Miniaturas ilustrativas
+                            — as fotos reais das obras não são exibidas nesta página.</div>
+                        </div>
+                        <div class="painel">
+                          <div class="painel-topo">
+                            <span class="grupo">
+                              <b>Histórico</b>
+                              <span class="selo selo-id" style="height: 18px">4</span>
+                            </span>
+                            <span style="color: #8B909B">⌃</span>
+                          </div>
+                          <div style="padding: 4px 18px 8px">
+                            <div class="historico">
+                              <span class="historico-icone">◎</span>
+                              <span>
+                                <b>Foto adicionada: placa</b>
+                                <small>usuario@exemplo.com · 14/10/2026 11:34</small>
+                              </span>
+                            </div>
+                            <div class="historico">
+                              <span class="historico-icone">◎</span>
+                              <span>
+                                <b>Foto adicionada: cozinha</b>
+                                <small>usuario@exemplo.com · 14/10/2026 11:34</small>
+                              </span>
+                            </div>
+                            <div class="historico">
+                              <span class="historico-icone">◎</span>
+                              <span>
+                                <b>Foto adicionada: fachada</b>
+                                <small>usuario@exemplo.com · 14/10/2026 11:33</small>
+                              </span>
+                            </div>
+                            <div class="historico">
+                              <span class="historico-icone">◎</span>
+                              <span>
+                                <b>Ordem de serviço criada</b>
+                                <small>usuario@exemplo.com · 14/10/2026 11:20</small>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div role="tabpanel" id="painel-rae" aria-labelledby="aba-rae" data-rotulo="Gerar RAE" tabindex="0" hidden>
+                    <div class="ui tela tela-entrada" role="img" aria-label="Fluxo de geração de RAE: modos automático por PDF e manual, pré-visualização da planilha com dados ocultados e formulário de identificação.">
+                      <div style="border: 1px solid #2A2E36; border-radius: 10px; background: #1B1E24; overflow: hidden">
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 18px; border-bottom: 1px solid #2A2E36">
+                          <span class="segmentos">
+                            <span>⇪ Automático (PDF)</span>
+                            <span class="ativo">✎ Manual</span>
+                          </span>
+                          <span style="font-size: 12px; color: #A9ADB6">Passo 1 de 2 — Identificação ✕</span>
+                        </div>
+                        <div style="display: grid; grid-template-columns: minmax(0, 1fr) 380px">
+                          <div style="padding: 18px; background: #23262D; border-right: 1px solid #2A2E36">
+                            <div class="papel">
+                              <div style="display: flex; justify-content: space-between; gap: 40px">
+                                <div style="display: flex; flex-direction: column; gap: 3px">
+                                  <span class="tarja claro" style="width: 130px; height: 5px"></span>
+                                  <span class="tarja claro" style="width: 110px; height: 5px"></span>
+                                  <span class="tarja claro" style="width: 120px; height: 5px"></span>
+                                </div>
+                                <div style="display: flex; flex-direction: column; gap: 3px; align-items: flex-end">
+                                  <span class="tarja claro" style="width: 140px; height: 5px"></span>
+                                  <span class="tarja claro" style="width: 160px; height: 5px"></span>
+                                  <span class="tarja claro" style="width: 150px; height: 5px"></span>
+                                </div>
+                              </div>
+                              <div style="display: flex; align-items: flex-end; gap: 16px; margin-top: 14px; border-bottom: 1.5px solid #1C2433; padding-bottom: 6px">
+                                <span style="width: 120px; height: 34px; border: 1px dashed #9AA3B5; display: grid; place-items: center; color: #6A7488; font-size: 7.5px; letter-spacing: .08em">LOGO</span>
+                                <div style="flex: 1; text-align: center">
+                                  <div style="font-size: 12px; font-weight: 700; color: #1E3A8A">Planilha
+                                    de Levantamento de Serviços – PLS</div>
+                                  <span class="tarja claro" style="width: 220px; height: 5px; margin-top: 3px"></span>
+                                </div>
+                                <div style="display: flex; flex-direction: column; gap: 3px; align-items: flex-end">
+                                  <small style="color: #6A7488">Contrato</small>
+                                  <span class="tarja claro" style="width: 90px; height: 7px; background: #1C2433"></span>
+                                </div>
+                              </div>
+                              <div class="papel-faixa">IDENTIFICAÇÃO DO PROPONENTE, RESPONSÁVEIS TÉCNICOS
+                                E DO IMÓVEL</div>
+                              <div class="papel-grade" style="grid-template-columns: 2fr 2fr 1fr 1fr">
+                                <div class="papel-celula">
+                                  <small>Proponente</small>
+                                  <span class="tarja claro" style="width: 80%; height: 6px; background: #1C2433"></span>
+                                </div>
+                                <div class="papel-celula">
+                                  <small>E-mail</small>
+                                  <span class="tarja claro" style="width: 75%; height: 6px; background: #1C2433"></span>
+                                </div>
+                                <div class="papel-celula">
+                                  <small>CPF/CNPJ</small>
+                                  <span class="tarja claro" style="width: 90%; height: 6px; background: #1C2433"></span>
+                                </div>
+                                <div class="papel-celula">
+                                  <small>Telefone</small>
+                                  <span class="tarja claro" style="width: 90%; height: 6px; background: #1C2433"></span>
+                                </div>
+                                <div class="papel-celula">
+                                  <small>RT pelo Projeto</small>
+                                  <span class="tarja claro" style="width: 70%; height: 6px; background: #1C2433"></span>
+                                </div>
+                                <div class="papel-celula">
+                                  <small>E-mail – RTP</small>
+                                  <span class="tarja claro" style="width: 75%; height: 6px; background: #1C2433"></span>
+                                </div>
+                                <div class="papel-celula">
+                                  <small>Nº CAU/CREA</small>
+                                  <span class="tarja claro" style="width: 70%; height: 6px; background: #1C2433"></span>
+                                </div>
+                                <div class="papel-celula">
+                                  <small>Telefone – RTP</small>
+                                  <span class="tarja claro" style="width: 90%; height: 6px; background: #1C2433"></span>
+                                </div>
+                                <div class="papel-celula">
+                                  <small>Endereço</small>
+                                  <span class="tarja claro" style="width: 85%; height: 6px; background: #1C2433"></span>
+                                </div>
+                                <div class="papel-celula">
+                                  <small>Bairro</small>
+                                  <span class="tarja claro" style="width: 70%; height: 6px; background: #1C2433"></span>
+                                </div>
+                                <div class="papel-celula">
+                                  <small>CEP</small>
+                                  <span class="tarja claro" style="width: 80%; height: 6px; background: #1C2433"></span>
+                                </div>
+                                <div class="papel-celula">
+                                  <small>UF</small>
+                                  <span class="tarja claro" style="width: 30%; height: 6px; background: #1C2433"></span>
+                                </div>
+                              </div>
+                              <div class="papel-faixa">PLANILHA DE LEVANTAMENTO DE SERVIÇOS – PLS</div>
+                              <div style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 14px">
+                                <div>
+                                  <div class="papel-linha" style="font-weight: 700; color: #3D4A63">
+                                    <span>Serviços</span>
+                                    <span>Incid. %</span>
+                                    <span>Item %</span>
+                                    <span>Obra %</span>
+                                  </div>
+                                  <div class="papel-linha">
+                                    <span>Serviços Preliminares e Gerais</span>
+                                    <span class="tarja claro" style="height: 6px"></span>
+                                    <span class="tarja claro" style="height: 6px; background: #C8D2F0"></span>
+                                    <span class="tarja claro" style="height: 6px"></span>
+                                  </div>
+                                  <div class="papel-linha">
+                                    <span>Infraestrutura</span>
+                                    <span class="tarja claro" style="height: 6px"></span>
+                                    <span class="tarja claro" style="height: 6px; background: #C8D2F0"></span>
+                                    <span class="tarja claro" style="height: 6px"></span>
+                                  </div>
+                                  <div class="papel-linha">
+                                    <span>Supraestrutura</span>
+                                    <span class="tarja claro" style="height: 6px"></span>
+                                    <span class="tarja claro" style="height: 6px; background: #C8D2F0"></span>
+                                    <span class="tarja claro" style="height: 6px"></span>
+                                  </div>
+                                  <div class="papel-linha">
+                                    <span>Paredes e Painéis</span>
+                                    <span class="tarja claro" style="height: 6px"></span>
+                                    <span class="tarja claro" style="height: 6px; background: #C8D2F0"></span>
+                                    <span class="tarja claro" style="height: 6px"></span>
+                                  </div>
+                                  <div class="papel-linha">
+                                    <span>Esquadrias</span>
+                                    <span class="tarja claro" style="height: 6px"></span>
+                                    <span class="tarja claro" style="height: 6px; background: #C8D2F0"></span>
+                                    <span class="tarja claro" style="height: 6px"></span>
+                                  </div>
+                                  <div class="papel-linha">
+                                    <span>Coberturas</span>
+                                    <span class="tarja claro" style="height: 6px"></span>
+                                    <span class="tarja claro" style="height: 6px; background: #C8D2F0"></span>
+                                    <span class="tarja claro" style="height: 6px"></span>
+                                  </div>
+                                  <div class="papel-linha">
+                                    <span>Revestimentos Internos</span>
+                                    <span class="tarja claro" style="height: 6px"></span>
+                                    <span class="tarja claro" style="height: 6px; background: #C8D2F0"></span>
+                                    <span class="tarja claro" style="height: 6px"></span>
+                                  </div>
+                                  <div class="papel-linha">
+                                    <span>Instalações Hidráulicas</span>
+                                    <span class="tarja claro" style="height: 6px"></span>
+                                    <span class="tarja claro" style="height: 6px; background: #C8D2F0"></span>
+                                    <span class="tarja claro" style="height: 6px"></span>
+                                  </div>
+                                  <div class="papel-linha">
+                                    <span>Pintura</span>
+                                    <span class="tarja claro" style="height: 6px"></span>
+                                    <span class="tarja claro" style="height: 6px; background: #C8D2F0"></span>
+                                    <span class="tarja claro" style="height: 6px"></span>
+                                  </div>
+                                </div>
+                                <div>
+                                  <div class="papel-linha" style="grid-template-columns: minmax(0, 1fr) 70px; font-weight: 700; color: #3D4A63">
+                                    <span>DATAS &amp; QUALIDADE</span>
+                                    <span></span>
+                                  </div>
+                                  <div class="papel-linha" style="grid-template-columns: minmax(0, 1fr) 70px">
+                                    <span>Contratação</span>
+                                    <span class="tarja claro" style="height: 6px; background: #CFE8C9"></span>
+                                  </div>
+                                  <div class="papel-linha" style="grid-template-columns: minmax(0, 1fr) 70px">
+                                    <span>Data início de obra</span>
+                                    <span class="tarja claro" style="height: 6px"></span>
+                                  </div>
+                                  <div class="papel-linha" style="grid-template-columns: minmax(0, 1fr) 70px">
+                                    <span>Término previsto</span>
+                                    <span class="tarja claro" style="height: 6px"></span>
+                                  </div>
+                                  <div class="papel-linha" style="grid-template-columns: minmax(0, 1fr) 70px">
+                                    <span>Data do levantamento</span>
+                                    <span class="tarja claro" style="height: 6px; background: #CFE8C9"></span>
+                                  </div>
+                                  <div class="papel-linha" style="grid-template-columns: minmax(0, 1fr) 70px">
+                                    <span>Execução conforme contratado?</span>
+                                    <span class="tarja claro" style="height: 6px; background: #C8D2F0"></span>
+                                  </div>
+                                  <div class="papel-linha" style="grid-template-columns: minmax(0, 1fr) 70px">
+                                    <span>Alvará válido?</span>
+                                    <span class="tarja claro" style="height: 6px; background: #C8D2F0"></span>
+                                  </div>
+                                  <div class="papel-linha" style="grid-template-columns: minmax(0, 1fr) 70px">
+                                    <span>Projeto sendo cumprido?</span>
+                                    <span class="tarja claro" style="height: 6px; background: #C8D2F0"></span>
+                                  </div>
+                                  <div style="margin-top: 8px; font-weight: 700; color: #3D4A63; text-align: center">CURVA
+                                    DE EVOLUÇÃO DA OBRA</div>
+                                  <div style="display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 3px; margin-top: 4px">
+                                    <span class="tarja claro" style="height: 6px; width: 100%; background: #C8D2F0"></span>
+                                    <span class="tarja claro" style="height: 6px; width: 100%; background: #C8D2F0"></span>
+                                    <span class="tarja claro" style="height: 6px; width: 100%; background: #C8D2F0"></span>
+                                    <span class="tarja claro" style="height: 6px; width: 100%"></span>
+                                    <span class="tarja claro" style="height: 6px; width: 100%"></span>
+                                    <span class="tarja claro" style="height: 6px; width: 100%"></span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div style="padding: 6px 20px 18px; display: flex; flex-direction: column">
+                            <span class="secao-form">CONTRATO</span>
+                            <span class="campo-rotulo">Número do Contrato</span>
+                            <span class="campo">0.0000.0000000-0</span>
+                            <span class="secao-form">PROPONENTE</span>
+                            <span class="campo-rotulo">Nome completo</span>
+                            <span class="campo"></span>
+                            <span class="campo-rotulo">CPF</span>
+                            <span class="campo"></span>
+                            <div style="display: grid; grid-template-columns: 80px minmax(0, 1fr); gap: 10px">
+                              <span>
+                                <span class="campo-rotulo">DDD</span>
+                                <span class="campo"></span>
+                              </span>
+                              <span>
+                                <span class="campo-rotulo">Telefone</span>
+                                <span class="campo"></span>
+                              </span>
+                            </div>
+                            <span class="secao-form">ENDEREÇO DO IMÓVEL</span>
+                            <span class="campo-rotulo">Endereço (Rua e Número)</span>
+                            <span class="campo"></span>
+                            <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 22px">
+                              <span class="botao-app botao-app-cinza" style="height: 40px">Visualizar PLS</span>
+                              <span class="botao-app botao-app-azul" style="height: 40px">Próximo →</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div role="tabpanel" id="painel-ag" aria-labelledby="aba-ag" data-rotulo="Agenda" tabindex="0" hidden>
+                    <div class="ui tela tela-entrada" role="img" aria-label="Agenda mensal de outubro de 2026 com ordens de serviço fictícias distribuídas pelos dias e legenda de prazos.">
+                      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px">
+                        <div style="display: flex; align-items: center; gap: 12px">
+                          <span class="app-titulo">Data de Criação</span>
+                          <span class="campo" style="color: #ECEEF2; gap: 18px">Data de criação ⌄</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 10px">
+                          <span class="mini-botao" style="height: 32px; padding: 0 14px">← Anterior</span>
+                          <b style="padding: 0 18px; font-size: 14px">Outubro 2026</b>
+                          <span class="mini-botao" style="height: 32px; padding: 0 14px">Próximo →</span>
+                          <span class="mini-botao" style="height: 32px; padding: 0 14px; background: #2563EB; color: #fff; border-color: #2563EB">Hoje</span>
+                        </div>
+                      </div>
+                      <div class="calendario">
+                        <div class="calendario-cabecalho">DOM</div>
+                        <div class="calendario-cabecalho">SEG</div>
+                        <div class="calendario-cabecalho">TER</div>
+                        <div class="calendario-cabecalho">QUA</div>
+                        <div class="calendario-cabecalho">QUI</div>
+                        <div class="calendario-cabecalho">SEX</div>
+                        <div class="calendario-cabecalho">SÁB</div>
+                        <div class="calendario-dia apagado"><span>27</span></div>
+                        <div class="calendario-dia apagado"><span>28</span></div>
+                        <div class="calendario-dia apagado"><span>29</span></div>
+                        <div class="calendario-dia apagado"><span>30</span></div>
+                        <div class="calendario-dia"><span>1</span></div>
+                        <div class="calendario-dia">
+                          <span>2</span>
+                          <span class="evento verde">OS-004 · A413</span>
+                        </div>
+                        <div class="calendario-dia"><span>3</span></div>
+                        <div class="calendario-dia"><span>4</span></div>
+                        <div class="calendario-dia"><span>5</span></div>
+                        <div class="calendario-dia"><span>6</span></div>
+                        <div class="calendario-dia">
+                          <span>7</span>
+                          <span class="evento vermelho">OS-005 · E401</span>
+                        </div>
+                        <div class="calendario-dia"><span>8</span></div>
+                        <div class="calendario-dia"><span>9</span></div>
+                        <div class="calendario-dia"><span>10</span></div>
+                        <div class="calendario-dia"><span>11</span></div>
+                        <div class="calendario-dia">
+                          <span>12</span>
+                          <span class="evento laranja">OS-006 · E401</span>
+                        </div>
+                        <div class="calendario-dia"><span>13</span></div>
+                        <div class="calendario-dia ativo">
+                          <span>14</span>
+                          <span class="evento">OS-001 · E401</span>
+                          <span class="evento verde">OS-002 · A413</span>
+                        </div>
+                        <div class="calendario-dia"><span>15</span></div>
+                        <div class="calendario-dia">
+                          <span>16</span>
+                          <span class="evento">OS-003 · E401</span>
+                        </div>
+                        <div class="calendario-dia"><span>17</span></div>
+                        <div class="calendario-dia"><span>18</span></div>
+                        <div class="calendario-dia"><span>19</span></div>
+                        <div class="calendario-dia">
+                          <span>20</span>
+                          <span class="evento">OS-007 · A413</span>
+                        </div>
+                        <div class="calendario-dia"><span>21</span></div>
+                        <div class="calendario-dia"><span>22</span></div>
+                        <div class="calendario-dia">
+                          <span>23</span>
+                          <span class="evento">OS-008 · E401</span>
+                        </div>
+                        <div class="calendario-dia"><span>24</span></div>
+                        <div class="calendario-dia"><span>25</span></div>
+                        <div class="calendario-dia"><span>26</span></div>
+                        <div class="calendario-dia">
+                          <span>27</span>
+                          <span class="evento">OS-009 · E401</span>
+                        </div>
+                        <div class="calendario-dia"><span>28</span></div>
+                        <div class="calendario-dia"><span>29</span></div>
+                        <div class="calendario-dia">
+                          <span>30</span>
+                          <span class="evento">OS-010 · A413</span>
+                        </div>
+                        <div class="calendario-dia"><span>31</span></div>
+                      </div>
+                      <div class="legenda">
+                        <span><i style="background: #3B82F6"></i>Normal</span>
+                        <span><i style="background: #F59E0B"></i>Prazo crítico (≤ 2 dias)</span>
+                        <span><i style="background: #EF4444"></i>Prazo vencido</span>
+                        <span><i style="background: #22C55E"></i>Concluída</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="vitrine-legenda" style="padding-bottom: 24px">
+                <span>Recriação da interface com dados fictícios</span>
+                <span>Dados pessoais e documentos ocultados</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="secao" id="funcionalidades" aria-labelledby="func-title">
+        <div class="container">
+          <div class="trilhos cruzes">
+            <div class="espacamento" style="padding-bottom: 72px">
+              <div class="cabecalho-duplo revelar" style="margin-bottom: 0">
+                <div>
+                  <p class="sobretitulo"><i></i>[ 05 ] Funcionalidades</p>
+                  <h2 class="titulo-secao" id="func-title">Tudo conectado ao acompanhamento <span class="suave">de
+                    cada OS.</span></h2>
+                </div>
+                <p class="chamada">Seis áreas do sistema trabalham sobre os mesmos dados: o que entra por
+                  e-mail, o que é registrado em campo e o que vai para o relatório.</p>
+              </div>
+            </div>
+            <div class="recursos">
+              <article class="recurso col-7 revelar">
+                <div>
+                  <span class="recurso-indice">01 · Dashboard operacional</span>
+                  <h3>Uma visão geral da operação.</h3>
+                  <p>Indicadores de e-mails recebidos e pendentes, ordens de serviço em andamento e concluídas,
+                    recebimento mensal e agenda da semana.</p>
+                </div>
+                <div class="recurso-visual ui" style="background: transparent" aria-hidden="true">
+                  <div class="indicadores pequeno">
+                    <div class="indicador" style="padding: 12px">
+                      <span class="indicador-icone cor-azul" style="width: 34px; height: 34px">
+                        <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor"><path d="M1.5 3.5h13v9h-13z" opacity=".35"></path><path d="M1.5 3.5L8 8.5l6.5-5" fill="none" stroke="currentColor" stroke-width="1.5"></path></svg>
+                      </span>
+                      <span><small>Emails Recebidos</small><b class="cor-azul">2</b></span>
+                    </div>
+                    <div class="indicador" style="padding: 12px">
+                      <span class="indicador-icone cor-laranja" style="width: 34px; height: 34px">
+                        <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor"><rect x="3" y="2.5" width="10" height="12" rx="1.5"></rect></svg>
+                      </span>
+                      <span><small>Emails Pendentes</small><b class="cor-laranja">1</b></span>
+                    </div>
+                    <div class="indicador" style="padding: 12px">
+                      <span class="indicador-icone cor-roxo" style="width: 34px; height: 34px">
+                        <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M13 6.5A5 5 0 003.6 5M3 9.5A5 5 0 0012.4 11M3.5 2.5V5H6M12.5 13.5V11H10"></path></svg>
+                      </span>
+                      <span><small>OS Em Andamento</small><b class="cor-roxo">2</b></span>
+                    </div>
+                    <div class="indicador" style="padding: 12px">
+                      <span class="indicador-icone cor-verde" style="width: 34px; height: 34px">
+                        <svg width="15" height="15" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6.5" fill="currentColor"></circle><path d="M5 8.2l2 2 4-4" fill="none" stroke="#15171C" stroke-width="1.6"></path></svg>
+                      </span>
+                      <span><small>OS Concluídas</small><b class="cor-verde">1</b></span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="recurso col-5 revelar">
+                <div>
+                  <span class="recurso-indice">02 · Gestão de ordens de serviço</span>
+                  <h3>Status, prazos e histórico em cada ordem.</h3>
+                  <p>Cada OS reúne código de atividade, cliente, valores, prazo de execução e o registro das
+                    atualizações.</p>
+                </div>
+                <div class="recurso-visual ui painel" aria-hidden="true">
+                  <div class="linha">
+                    <span><b>OS-001</b><small>Acompanhamento de Obra</small></span>
+                    <span class="codigo">E401</span>
+                    <span class="selo selo-roxo">Em andamento</span>
+                  </div>
+                  <div class="linha verde">
+                    <span><b>OS-002</b><small>Acompanhamento de Obra</small></span>
+                    <span class="codigo">A413</span>
+                    <span class="selo selo-verde">Concluída</span>
+                  </div>
+                  <div style="padding: 12px 16px">
+                    <div style="display: flex; justify-content: space-between; font-size: 10.5px; color: #8B909B">
+                      <span>PRAZO DE EXECUÇÃO</span>
+                      <span style="color: #ECEEF2">4 de 6 dias restantes</span>
+                    </div>
+                    <div style="height: 6px; border-radius: 4px; background: #2A2E36; margin-top: 8px; overflow: hidden">
+                      <div style="width: 33%; height: 100%; background: #22C55E"></div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="recurso col-4 revelar">
+                <div>
+                  <span class="recurso-indice">03 · Monitoramento de e-mails</span>
+                  <h3>Mensagens no fluxo de trabalho.</h3>
+                  <p>E-mails relacionados às ordens de serviço ficam organizados no painel, com indicação
+                    do que está pendente.</p>
+                </div>
+                <div class="recurso-visual ui painel" aria-hidden="true">
+                  <div class="email">
+                    <span class="email-avatar">ER</span>
+                    <div class="email-texto">
+                      <b>Engenharia Regional</b>
+                      <span>Nova ordem de serviço</span>
+                    </div>
+                    <div class="email-meta"><span class="selo selo-laranja">Pendente</span></div>
+                  </div>
+                  <div class="email" style="border-bottom: 0">
+                    <span class="email-avatar">AT</span>
+                    <div class="email-texto">
+                      <b>Atendimento Demo</b>
+                      <span>Documentação complementar</span>
+                    </div>
+                    <div class="email-meta">13/10</div>
+                  </div>
+                </div>
+              </article>
+              <article class="recurso col-4 revelar">
+                <div>
+                  <span class="recurso-indice">04 · Registros fotográficos</span>
+                  <h3>Fotos ligadas à respectiva OS.</h3>
+                  <p>Envie, visualize, renomeie, exclua e baixe todas as fotos de uma ordem de serviço em
+                    um só lugar.</p>
+                </div>
+                <div class="recurso-visual ui" style="background: transparent; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px" aria-hidden="true">
+                  <div class="foto">
+                    <div class="foto-imagem" style="height: 64px"></div>
+                    <div class="foto-meta"><b>fachada</b></div>
+                  </div>
+                  <div class="foto">
+                    <div class="foto-imagem" style="height: 64px"></div>
+                    <div class="foto-meta"><b>cozinha</b></div>
+                  </div>
+                  <div class="foto">
+                    <div class="foto-imagem" style="height: 64px"></div>
+                    <div class="foto-meta"><b>placa</b></div>
+                  </div>
+                </div>
+              </article>
+              <article class="recurso col-4 revelar">
+                <div>
+                  <span class="recurso-indice">05 · Geração de RAE</span>
+                  <h3>Relatório a partir da ordem de serviço.</h3>
+                  <p>O RAE é gerado em etapas, de forma automática a partir de PDF ou manual, aproveitando
+                    os dados e as fotos da OS.</p>
+                </div>
+                <div class="recurso-visual ui painel" style="padding: 14px" aria-hidden="true">
+                  <span class="segmentos" style="width: 100%">
+                    <span style="flex: 1; justify-content: center">Automático (PDF)</span>
+                    <span class="ativo" style="flex: 1; justify-content: center">Manual</span>
+                  </span>
+                  <div style="font-size: 11px; color: #A9ADB6; margin: 12px 0 10px">Passo 1 de 2 — Identificação</div>
+                  <span class="botao-app botao-app-azul">Gerar RAE</span>
+                </div>
+              </article>
+              <article class="recurso col-12 largo revelar">
+                <div>
+                  <span class="recurso-indice">06 · Agenda e acompanhamento</span>
+                  <h3>As ordens de serviço no calendário.</h3>
+                  <p>Visualize as OS por dia, semana ou mês, com cores que indicam prazo normal, crítico,
+                    vencido ou concluído.</p>
+                </div>
+                <div class="recurso-visual ui painel" aria-hidden="true">
+                  <div class="semana">
+                    <div class="dia-semana">SEG<b>12</b><span class="evento laranja">OS-006</span></div>
+                    <div class="dia-semana">TER<b>13</b></div>
+                    <div class="dia-semana ativo">QUA<b>14</b><span class="evento">OS-001</span><span class="evento verde">OS-002</span></div>
+                    <div class="dia-semana">QUI<b>15</b></div>
+                    <div class="dia-semana">SEX<b>16</b><span class="evento">OS-003</span></div>
+                    <div class="dia-semana">SÁB<b>17</b></div>
+                    <div class="dia-semana">DOM<b>18</b></div>
+                  </div>
+                  <div class="legenda" style="padding: 10px 14px; margin: 0; border-top: 1px solid #2A2E36; flex-wrap: wrap">
+                    <span><i style="background: #3B82F6"></i>Normal</span>
+                    <span><i style="background: #F59E0B"></i>Prazo crítico</span>
+                    <span><i style="background: #EF4444"></i>Vencido</span>
+                    <span><i style="background: #22C55E"></i>Concluída</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="secao" id="como-funciona" aria-labelledby="como-title">
+        <div class="container">
+          <div class="trilhos cruzes">
+            <div class="espacamento">
+              <div class="cabecalho-duplo revelar">
+                <div>
+                  <p class="sobretitulo"><i></i>[ 06 ] Como funciona</p>
+                  <h2 class="titulo-secao" id="como-title">Do primeiro e-mail <span class="suave">ao relatório
+                    final.</span></h2>
+                </div>
+                <p class="chamada">Um fluxo em quatro etapas, com a equipe no controle de cada uma delas.</p>
+              </div>
+              <ol class="etapas" style="list-style: none; margin: 0; padding: 0">
+                <li class="etapa revelar">
+                  <div class="marco"><b></b><span></span></div>
+                  <span class="etapa-numero">01</span>
+                  <h3>Receba e organize</h3>
+                  <p>As mensagens relevantes são identificadas e organizadas no fluxo de trabalho.</p>
+                  <div class="etapa-tag">Dashboard · E-mails</div>
+                </li>
+                <li class="etapa revelar">
+                  <div class="marco"><b></b><span></span></div>
+                  <span class="etapa-numero">02</span>
+                  <h3>Acompanhe as ordens de serviço</h3>
+                  <p>Consulte informações, prazos, status e histórico das atividades.</p>
+                  <div class="etapa-tag">Ordens de serviço · Agenda</div>
+                </li>
+                <li class="etapa revelar">
+                  <div class="marco"><b></b><span></span></div>
+                  <span class="etapa-numero">03</span>
+                  <h3>Centralize os registros</h3>
+                  <p>Acesse os registros fotográficos e as informações relacionadas a cada OS.</p>
+                  <div class="etapa-tag">Fotos · Histórico</div>
+                </li>
+                <li class="etapa revelar">
+                  <div class="marco"><b></b><span></span></div>
+                  <span class="etapa-numero">04</span>
+                  <h3>Gere os relatórios</h3>
+                  <p>Utilize as informações disponíveis para gerar o RAE e documentar o acompanhamento.</p>
+                  <div class="etapa-tag">Gerar RAE</div>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="secao integrada" id="integracao" aria-labelledby="int-title">
+        <div class="container">
+          <div class="trilhos cruzes">
+            <div class="espacamento">
+              <div class="cabecalho-centro revelar">
+                <p class="sobretitulo centro"><i></i>[ 07 ] Visão integrada</p>
+                <h2 class="titulo-secao centro" id="int-title">Um fluxo organizado, <span class="suave">do
+                  início ao fim.</span></h2>
+                <p class="chamada centro">Cada parte do processo fica vinculada à mesma ordem de serviço —
+                  sem informação perdida entre uma etapa e outra.</p>
+              </div>
+              <div class="fluxo revelar">
+                <div class="fluxo-no">
+                  <div class="fluxo-topo"><span>01 · Entrada</span><span>→</span></div>
+                  <div class="fluxo-corpo">
+                    <h3>E-mails</h3>
+                    <p>Mensagens recebidas e pendentes.</p>
+                    <div class="fluxo-previa" aria-hidden="true">
+                      <div class="linha-previa"><i></i><span class="barra"></span>09:12</div>
+                      <div class="linha-previa"><i style="background: #555"></i><span class="barra"></span>16:40</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="fluxo-no">
+                  <div class="fluxo-topo"><span>02 · Controle</span><span>→</span></div>
+                  <div class="fluxo-corpo">
+                    <h3>Ordens de serviço</h3>
+                    <p>Status, prazo, valores e histórico.</p>
+                    <div class="fluxo-previa" aria-hidden="true">
+                      <div class="linha-previa" style="color: #F2F2F2">OS-001 <span class="barra" style="background: transparent"></span>E401</div>
+                      <div style="height: 4px; background: #262626">
+                        <div style="width: 33%; height: 100%; background: #D9D9D9"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="fluxo-no">
+                  <div class="fluxo-topo"><span>03 · Registro</span><span>→</span></div>
+                  <div class="fluxo-corpo">
+                    <h3>Registros fotográficos</h3>
+                    <p>Fotos vinculadas à OS.</p>
+                    <div class="fluxo-previa" aria-hidden="true">
+                      <div class="miniaturas"><span></span><span></span><span></span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="fluxo-no">
+                  <div class="fluxo-topo"><span>04 · Documento</span><span>■</span></div>
+                  <div class="fluxo-corpo">
+                    <h3>Relatórios</h3>
+                    <p>RAE gerado a partir da OS.</p>
+                    <div class="fluxo-previa" aria-hidden="true">
+                      <div class="linha-previa" style="color: #F2F2F2">RAE <span class="barra" style="background: transparent"></span>OS-001</div>
+                      <div class="linha-previa"><span class="barra"></span></div>
+                      <div class="linha-previa"><span class="barra" style="flex: .6"></span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="colchete" aria-hidden="true"></div>
+              <div class="colchete-rotulo">
+                <span>Tudo vinculado à mesma ordem de serviço</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="secao contato" id="contato" aria-labelledby="cta-title">
+        <div class="contato-fundo" aria-hidden="true"></div>
+        <div class="container">
+          <div class="trilhos cruzes">
+            <div class="contato-topo">
+              <svg class="estrela revelar" width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C12 7 17 12 24 12C17 12 12 17 12 24C12 17 7 12 0 12C7 12 12 7 12 0Z"></path></svg>
+              <h2 class="revelar" id="cta-title">Tenha mais clareza sobre <span class="suave">cada ordem de
+                serviço.</span></h2>
+              <p class="revelar">Centralize informações, acompanhe atividades e organize a documentação das
+                obras com o SIGOS.</p>
+            </div>
+            <div class="contato-caixa revelar">
+              <div class="contato-lateral">
+                <div>
+                  <p class="sobretitulo" style="margin-bottom: 18px"><i></i>Entrar em contato</p>
+                  <h3>Fale sobre o SIGOS.</h3>
+                  <p style="margin-top: 12px">Envie um e-mail com o assunto já preenchido. O retorno é feito
+                    pelo seu e-mail.</p>
+                </div>
+                <ul>
+                  <li><span class="mono">01</span>Clique em “Enviar e-mail”</li>
+                  <li><span class="mono">02</span>Seu aplicativo de e-mail abre com o assunto pronto</li>
+                  <li><span class="mono">03</span>Você recebe o retorno no seu e-mail</li>
+                </ul>
+              </div>
+              <div class="contato-email">
+                <p class="mono email-rotulo">Assunto</p>
+                <p class="email-assunto">Informações sobre o SIGOS</p>
+                <a class="botao botao-primario" id="enviar-email" href="mailto:gmportolima25@gmail.com?subject=Informa%C3%A7%C3%B5es%20sobre%20o%20SIGOS">Enviar
+                  e-mail <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4"></path></svg></a>
+                <small>Se nada abrir, escreva para <a href="mailto:gmportolima25@gmail.com?subject=Informa%C3%A7%C3%B5es%20sobre%20o%20SIGOS">gmportolima25@gmail.com</a>.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <footer class="secao">
+      <div class="container">
+        <div class="trilhos cruzes">
+          <div class="rodape-grade">
+            <div>
+              <a class="logo" href="#topo" aria-label="SIGOS — voltar ao início"><img src="assets/img/logo-sigos.png" alt="" width="30" height="30">SIGOS</a>
+              <p>Sistema Integrado de Gestão de Ordens de Serviço para o acompanhamento de obras.</p>
+            </div>
+            <div>
+              <h4>Produto</h4>
+              <a class="rodape-link" href="#funcionalidades">Funcionalidades</a>
+              <a class="rodape-link" href="#produto">Por dentro do SIGOS</a>
+              <a class="rodape-link" href="#integracao">Visão integrada</a>
+            </div>
+            <div>
+              <h4>Página</h4>
+              <a class="rodape-link" href="#como-funciona">Como funciona</a>
+            </div>
+            <div>
+              <h4>Contato</h4>
+              <a class="rodape-link" href="#contato">Entrar em contato</a>
+            </div>
+          </div>
+          <div class="rodape-base">
+            <span>© <span id="ano">2026</span> SIGOS. Todos os direitos reservados.</span>
+            <span>Gestão de OS · Acompanhamento de obras</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
